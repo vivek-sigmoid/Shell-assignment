@@ -52,4 +52,4 @@ then
 fi
 done < $file
 new_line=$view";"$scale";"$component";"$ETL";"$x"="$count
-$(sed -iz "s/$line/$new_line/" $file)
+$(sed -i "0,/$line/{s/$line/$new_line/}" $file)
